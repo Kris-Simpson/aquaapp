@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *default
+  database: aquaapp_development
+
+test:
+  <<: *default
+  database: aquaapp_test
+
+staging:
+  <<: *default
+  database: aquaapp_staging
+
+production:
+  <<: *default
+  database: aquaapp_production
